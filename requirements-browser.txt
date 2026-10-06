@@ -1,2 +1,0 @@
-# Optional, for the disabled legacy mtrsh adapter only.
-pyppeteer>=2.0,<3
