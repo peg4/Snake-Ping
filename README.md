@@ -15,13 +15,16 @@ python -m pip install -r requirements.txt
 ```
 
 All enabled plugins work without Chrome or Chromium. Mudfish, lookingHouse, lookingCenter,
-telephone, vultr, and pingpe use HTTP. DNS Tools uses SignalR JSON over HTTP
+telephone, vultr, pingpe, and globalping use HTTP. DNS Tools uses SignalR JSON over HTTP
 long polling. mtrtools uses a WebSocket connection.
 
 On Windows activate the environment with `.venv\Scripts\activate`. The
 configuration file is optional; copy `config.example.json` to `config.json`
 to adjust `workers`. Old `executablePath` settings can be left in place; enabled
 plugins do not use them.
+
+The disabled legacy mtrsh adapter still requires a browser and the
+optional `requirements-browser.txt`. It is not selected by normal runs.
 
 ## Run
 
@@ -43,6 +46,7 @@ python snake.py NL 1.1.1.1 pingpe
 python snake.py NL 1.1.1.1 telephone
 python snake.py NL 1.1.1.1 lookingCenter
 python snake.py NL 1.1.1.1 mtrtools
+python snake.py FI 5.23.111.225 globalping
 ```
 
 Country codes and names are case insensitive. `UK` is accepted as an alias for
@@ -133,6 +137,33 @@ Sites displaying a Terms of Use checkbox are skipped by default. If you have
 reviewed and accepted those sites' terms, add `"telephoneAcceptTerms": true` to
 `config.json` to submit the checkbox. TLS validation remains enabled: expired
 certificates and unavailable sites are reported as node failures.
+
+## Globalping
+
+The `globalping` plugin uses the public HTTPS API directly; no Globalping CLI,
+browser, or API key is required for anonymous requests. Country codes/names
+use the standard Snake-Ping normalization. `any` requests probes worldwide.
+
+```sh
+python snake.py FI 5.23.111.225 globalping
+python snake.py LT 5.23.111.225 globalping
+python snake.py any 1.1.1.1 globalping
+```
+
+By default, it requests up to 5 probes, with 4 ping packets per probe. Add
+`"globalpingLimit": 10` to `config.json` to change the requested count. The API
+may return fewer probes when a country has insufficient available nodes.
+Anonymous requests allow 1–50 probes; authenticated requests allow up to 500.
+An optional token can be supplied through `GLOBALPING_TOKEN` or the
+`globalpingToken` config key. Keep real tokens out of shared configuration files.
+
+The plugin creates one measurement and polls its status, waiting 500 ms after
+each incomplete response. Rate-limit errors (HTTP 429) are reported, including
+available remaining/reset/retry headers, and creation requests are not retried.
+Completed per-probe results are preserved if polling later fails or reaches
+its deadline. Failed probes, zero received packets, and invalid averages are
+excluded. Globalping does not participate in country comparison because the
+API results do not expose the selected probe's source IP.
 
 ## Tests
 

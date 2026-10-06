@@ -2,7 +2,7 @@
 
 Date: 2026-10-06. Python: 3.12.
 
-- `python -m unittest discover -s tests -v`: 55 tests passed.
+- `python -m unittest discover -s tests -v`: 64 tests passed.
 - `git diff --check`: passed.
 - Live command: `python snake.py NL 1.1.1.1 mudfish` exited with status 0
   and returned 11 measurements from Netherlands nodes in 38.48 seconds.
@@ -281,3 +281,40 @@ endpoints were absent from the DE job list. Newly working Hybula nodes included
 prohosting24.de at 38.42 ms and harmony-solutions.de at 43.25 ms. Four nodes
 returned HTTP 502 or timed out, two returned no supported summary, and
 lowhosting.com required Terms of Use acceptance. TLS verification stayed enabled.
+
+## Globalping plugin
+
+Added `Plugins/globalping.py` using the official public HTTP API and its current
+OpenAPI specification (`https://api.globalping.io/v1/spec.yaml`, with schemas
+and examples from `jsdelivr/globalping/public/v1/components`). It creates one
+ping measurement, requests up to five probes by default, sends four packets
+per probe, and polls no faster than once per 500 ms after each response.
+The probe timeout is 30 seconds and the client allows 45 seconds for execution
+and API finalization. The optional API token is read from `GLOBALPING_TOKEN` or
+`globalpingToken`; no browser or external Globalping CLI is used.
+
+Country requests use the normalized ISO alpha-2 country field; `any` omits
+location filters. Completed results use API `stats.avg` in milliseconds. Failed
+results, zero received packets, invalid averages, and unexpected countries are
+excluded. Result indexes preserve distinct probes with identical location or
+network names. The resolved target address is not misrepresented as a source
+probe address, so country comparison is unsupported. Poll failures and client
+deadlines preserve already completed results. HTTP 429 produces an explicit
+rate-limit diagnostic without retrying the measurement-creation POST.
+
+Live CLI: `python snake.py FI 5.23.111.225 globalping` exited with status 0 and
+returned five Finnish probes in 11.52 seconds without a token:
+
+| City | Network | Average |
+| --- | --- | --- |
+| Helsinki | Hetzner Online | 18.26 ms |
+| Helsinki | Baykov Ilya Sergeevich | 18.58 ms |
+| Helsinki | HOSTKEY | 26.14 ms |
+| Helsinki | H2NEXUS CLOUD SERVICES - FZCO | 33.38 ms |
+| Helsinki | Inios | 51.79 ms |
+
+All 64 offline tests pass. Globalping tests cover country/worldwide requests,
+optional authentication, configuration limits, polling intervals, failure and
+country filtering, duplicate-looking probes, preserving partial results on
+errors/deadlines, rate limits, rejecting invalid IDs, and plugin discovery.
+`git diff --check` passes.
