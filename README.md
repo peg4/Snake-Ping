@@ -23,9 +23,6 @@ configuration file is optional; copy `config.example.json` to `config.json`
 to adjust `workers`. Old `executablePath` settings can be left in place; enabled
 plugins do not use them.
 
-The disabled legacy mtrsh adapter still requires a browser and the
-optional `requirements-browser.txt`. It is not selected by normal runs.
-
 ## Run
 
 A quick start:
