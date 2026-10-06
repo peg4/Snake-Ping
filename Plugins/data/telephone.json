@@ -1,0 +1,1939 @@
+{
+  "date": "2026-10-06",
+  "sources": [
+    "https://raw.githubusercontent.com/Ne00n/Looking-Glass-2/master/data/lg.json",
+    "https://raw.githubusercontent.com/Ne00n/Looking-Glass-2/master/data/everything.json"
+  ],
+  "locations": {
+    "US": {
+      "silicloud.com/lg-cn2gia-west01-us.silicloud.com/": {
+        "url": "https://lg-cn2gia-west01-us.silicloud.com/",
+        "provider": "silicloud.com",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "103.177.81.120"
+      },
+      "silicloud.com/lg-global-west01-us-v6.silicloud.com/": {
+        "url": "https://lg-global-west01-us-v6.silicloud.com/",
+        "provider": "silicloud.com",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "154.19.185.122"
+      },
+      "knownhost.com/lg.atl.knownhost.com/": {
+        "url": "https://lg.atl.knownhost.com/",
+        "provider": "knownhost.com",
+        "city": "Atlanta",
+        "country": "US",
+        "ipv4": "64.74.200.107"
+      },
+      "as20278.net/lg.chi1.as20278.net/": {
+        "url": "http://lg.chi1.as20278.net/",
+        "provider": "as20278.net",
+        "city": "Buffalo",
+        "country": "US",
+        "ipv4": "167.88.10.4"
+      },
+      "as20278.net/lg.buf1.as20278.net/": {
+        "url": "http://lg.buf1.as20278.net/",
+        "provider": "as20278.net",
+        "city": "Buffalo",
+        "country": "US",
+        "ipv4": "96.9.249.58"
+      },
+      "cloudc.one/la.lg.cloudc.one/": {
+        "url": "http://la.lg.cloudc.one/",
+        "provider": "cloudc.one",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "148.135.114.75"
+      },
+      "vikinglayer.com/lg.dal.vikinglayer.com/": {
+        "url": "http://lg.dal.vikinglayer.com/",
+        "provider": "vikinglayer.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "192.138.210.63"
+      },
+      "ultravps.eu/lg.lax.us.ultravps.eu/": {
+        "url": "http://lg.lax.us.ultravps.eu/",
+        "provider": "ultravps.eu",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "69.12.89.3"
+      },
+      "ultravps.eu/lg.dal.us.ultravps.eu/": {
+        "url": "http://lg.dal.us.ultravps.eu/",
+        "provider": "ultravps.eu",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "108.181.220.6"
+      },
+      "hosteroid.uk/nj-lg.hosteroid.uk/": {
+        "url": "https://nj-lg.hosteroid.uk/",
+        "provider": "hosteroid.uk",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "162.254.85.201"
+      },
+      "khanwebhost.com/texaslg.khanwebhost.com/": {
+        "url": "https://texaslg.khanwebhost.com/",
+        "provider": "khanwebhost.com",
+        "city": "Houston",
+        "country": "US",
+        "ipv4": "64.112.124.13"
+      },
+      "bacloud.com/lg-chi-us.bacloud.com/": {
+        "url": "http://lg-chi-us.bacloud.com/",
+        "provider": "bacloud.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "88.119.175.50"
+      },
+      "drserver.net/lg-dal.ipv4.drserver.net/": {
+        "url": "http://lg-dal.ipv4.drserver.net/",
+        "provider": "drserver.net",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "192.138.210.63"
+      },
+      "salmoncloud.co.uk/sjc.lg.salmoncloud.co.uk/": {
+        "url": "http://sjc.lg.salmoncloud.co.uk/",
+        "provider": "salmoncloud.co.uk",
+        "city": "San Jose",
+        "country": "US",
+        "ipv4": "104.234.4.254"
+      },
+      "leveloneservers.com/dal.lg.leveloneservers.com/": {
+        "url": "https://dal.lg.leveloneservers.com/",
+        "provider": "leveloneservers.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "45.43.13.170"
+      },
+      "leveloneservers.com/tpa.lg.leveloneservers.com/": {
+        "url": "https://tpa.lg.leveloneservers.com/",
+        "provider": "leveloneservers.com",
+        "city": "Tampa",
+        "country": "US",
+        "ipv4": "104.247.114.4"
+      },
+      "quickpacket.com/lg.clt01.quickpacket.com/": {
+        "url": "http://lg.clt01.quickpacket.com/",
+        "provider": "quickpacket.com",
+        "city": "Ashburn",
+        "country": "US",
+        "ipv4": "64.187.224.4"
+      },
+      "quickpacket.com/lg.lax01.quickpacket.com/": {
+        "url": "http://lg.lax01.quickpacket.com/",
+        "provider": "quickpacket.com",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "45.43.223.2"
+      },
+      "alphavps.com/lgny.alphavps.com/": {
+        "url": "http://lgny.alphavps.com/",
+        "provider": "alphavps.com",
+        "city": "New York",
+        "country": "US",
+        "ipv4": "165.140.242.110"
+      },
+      "alphavps.com/lgla.alphavps.com/": {
+        "url": "http://lgla.alphavps.com/",
+        "provider": "alphavps.com",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "165.140.241.183"
+      },
+      "hostmayo.com/lg.hostmayo.com/": {
+        "url": "https://lg.hostmayo.com/",
+        "provider": "hostmayo.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "104.218.236.24"
+      },
+      "extravm.com/dal.lg.extravm.com/": {
+        "url": "https://dal.lg.extravm.com/",
+        "provider": "extravm.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "216.146.25.35"
+      },
+      "extravm.com/mia.lg.extravm.com/": {
+        "url": "https://mia.lg.extravm.com/",
+        "provider": "extravm.com",
+        "city": "Miami",
+        "country": "US",
+        "ipv4": "128.254.207.3"
+      },
+      "extravm.com/nyc.lg.extravm.com/": {
+        "url": "https://nyc.lg.extravm.com/",
+        "provider": "extravm.com",
+        "city": "Piscataway",
+        "country": "US",
+        "ipv4": "45.59.170.10"
+      },
+      "cloudpacket.net/chicago.lg.cloudpacket.net/": {
+        "url": "https://chicago.lg.cloudpacket.net/",
+        "provider": "cloudpacket.net",
+        "city": "Chicago",
+        "country": "US",
+        "ipv4": "45.134.11.150"
+      },
+      "racknerd.com/lg-dal.racknerd.com/": {
+        "url": "http://lg-dal.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "198.23.249.100"
+      },
+      "racknerd.com/lg-ash.racknerd.com/": {
+        "url": "http://lg-ash.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Ashburn",
+        "country": "US",
+        "ipv4": "192.3.254.158"
+      },
+      "racknerd.com/lg-lax02.racknerd.com/": {
+        "url": "https://lg-lax02.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "204.13.154.3"
+      },
+      "racknerd.com/lg-chi.racknerd.com/": {
+        "url": "http://lg-chi.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Elk Grove Village",
+        "country": "US",
+        "ipv4": "198.23.228.15"
+      },
+      "racknerd.com/lg-ny.racknerd.com/": {
+        "url": "http://lg-ny.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Buffalo",
+        "country": "US",
+        "ipv4": "192.3.81.8"
+      },
+      "racknerd.com/lg-atl.racknerd.com/": {
+        "url": "http://lg-atl.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Marietta",
+        "country": "US",
+        "ipv4": "107.173.164.160"
+      },
+      "racknerd.com/lg-sea.racknerd.com/": {
+        "url": "http://lg-sea.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Seattle",
+        "country": "US",
+        "ipv4": "192.3.253.2"
+      },
+      "racknerd.com/lg-sj.racknerd.com/": {
+        "url": "http://lg-sj.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Santa Clara",
+        "country": "US",
+        "ipv4": "192.210.207.88"
+      },
+      "racknerd.com/lg-nj.racknerd.com/": {
+        "url": "http://lg-nj.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Buffalo",
+        "country": "US",
+        "ipv4": "192.3.165.30"
+      },
+      "dedirock.com/la1.lg.dedirock.com/": {
+        "url": "https://la1.lg.dedirock.com/",
+        "provider": "dedirock.com",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "107.174.123.254"
+      },
+      "dedirock.com/buf1.lg.dedirock.com/": {
+        "url": "https://buf1.lg.dedirock.com/",
+        "provider": "dedirock.com",
+        "city": "Buffalo",
+        "country": "US",
+        "ipv4": "199.188.100.133"
+      },
+      "microtronixdc.com/lg-o.microtronixdc.com/": {
+        "url": "https://lg-o.microtronixdc.com/",
+        "provider": "microtronixdc.com",
+        "city": "Ottoville",
+        "country": "US",
+        "ipv4": "45.135.163.53"
+      },
+      "tnahosting.net/lg.chi2.tnahosting.net/": {
+        "url": "http://lg.chi2.tnahosting.net/",
+        "provider": "tnahosting.net",
+        "city": "Schaumburg",
+        "country": "US",
+        "ipv4": "158.51.98.2"
+      },
+      "psychz.net/lg.chi.psychz.net/": {
+        "url": "http://lg.chi.psychz.net/",
+        "provider": "psychz.net",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "172.107.196.100"
+      },
+      "psychz.net/lg.texas.psychz.net/": {
+        "url": "https://lg.texas.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "108.181.89.251"
+      },
+      "psychz.net/lg.va.psychz.net/": {
+        "url": "http://lg.va.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Ashburn",
+        "country": "US",
+        "ipv4": "108.181.134.142"
+      },
+      "layer.ae/spk-lg.layer.ae/": {
+        "url": "https://spk-lg.layer.ae/",
+        "provider": "layer.ae",
+        "city": "Spokane",
+        "country": "US",
+        "ipv4": "199.119.138.3"
+      },
+      "speedypage.com/ash.lg.speedypage.com/": {
+        "url": "https://ash.lg.speedypage.com/",
+        "provider": "speedypage.com",
+        "city": "Ashburn",
+        "country": "US",
+        "ipv4": "103.163.186.2"
+      },
+      "solidseovps.com/lg-az.solidseovps.com/speedtest/": {
+        "url": "http://lg-az.solidseovps.com/speedtest/",
+        "provider": "solidseovps.com",
+        "city": "Phoenix",
+        "country": "US",
+        "ipv4": "165.140.118.184"
+      },
+      "solidseovps.com/lg-tpa.solidseovps.com/speedtest/": {
+        "url": "http://lg-tpa.solidseovps.com/speedtest/",
+        "provider": "solidseovps.com",
+        "city": "Tampa",
+        "country": "US",
+        "ipv4": "165.140.117.254"
+      },
+      "adtaq.net/lg.adtaq.net/": {
+        "url": "https://lg.adtaq.net/",
+        "provider": "adtaq.net",
+        "city": "Quincy",
+        "country": "US",
+        "ipv4": "208.88.16.9"
+      },
+      "plox.host/lg.nyc.plox.host/": {
+        "url": "https://lg.nyc.plox.host/",
+        "provider": "plox.host",
+        "city": "New York",
+        "country": "US",
+        "ipv4": "172.111.48.4"
+      },
+      "plox.host/lg.dal.plox.host/": {
+        "url": "https://lg.dal.plox.host/",
+        "provider": "plox.host",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "66.11.123.33"
+      },
+      "oplink.net/speedtest.oplink.net/": {
+        "url": "https://speedtest.oplink.net/",
+        "provider": "oplink.net",
+        "city": "Houston",
+        "country": "US",
+        "ipv4": "216.230.224.34"
+      },
+      "misaka.one/us-iad01.lg.misaka.one/": {
+        "url": "http://us-iad01.lg.misaka.one/",
+        "provider": "misaka.one",
+        "city": "Ashburn",
+        "country": "US",
+        "ipv4": "199.119.65.233"
+      },
+      "starrydns.com/la3-usa.lg.starrydns.com/": {
+        "url": "http://la3-usa.lg.starrydns.com/",
+        "provider": "starrydns.com",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "23.236.74.3"
+      },
+      "readydedis.com/lg.atl01.readydedis.com/": {
+        "url": "https://lg.atl01.readydedis.com/",
+        "provider": "readydedis.com",
+        "city": "Marietta",
+        "country": "US",
+        "ipv4": "23.95.90.222"
+      },
+      "radwebhosting.com/lg.phx-1.us.radwebhosting.com/": {
+        "url": "http://lg.phx-1.us.radwebhosting.com/",
+        "provider": "radwebhosting.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "69.162.96.20"
+      },
+      "aquatis.host/tpa.lg.aquatis.host/": {
+        "url": "https://tpa.lg.aquatis.host/",
+        "provider": "aquatis.host",
+        "city": "Tampa",
+        "country": "US",
+        "ipv4": "198.45.114.51"
+      },
+      "aquatis.host/dal.lg.aquatis.host/": {
+        "url": "https://dal.lg.aquatis.host/",
+        "provider": "aquatis.host",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "45.61.143.40"
+      },
+      "aquatis.host/sea.lg.aquatis.host/": {
+        "url": "https://sea.lg.aquatis.host/",
+        "provider": "aquatis.host",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "216.146.27.102"
+      },
+      "nuyek.com/lg.nuyek.com/": {
+        "url": "https://lg.nuyek.com/",
+        "provider": "nuyek.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "23.171.8.136"
+      },
+      "colocrossing.com/lg.atl.colocrossing.com/": {
+        "url": "http://lg.atl.colocrossing.com/",
+        "provider": "colocrossing.com",
+        "city": "Marietta",
+        "country": "US",
+        "ipv4": "192.3.16.134"
+      },
+      "colocrossing.com/lg.la.colocrossing.com/": {
+        "url": "http://lg.la.colocrossing.com/",
+        "provider": "colocrossing.com",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "107.175.180.6"
+      },
+      "colocrossing.com/lg.dal.colocrossing.com/": {
+        "url": "http://lg.dal.colocrossing.com/",
+        "provider": "colocrossing.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "192.3.237.150"
+      },
+      "colocrossing.com/lg.chi.colocrossing.com/": {
+        "url": "http://lg.chi.colocrossing.com/",
+        "provider": "colocrossing.com",
+        "city": "Elk Grove Village",
+        "country": "US",
+        "ipv4": "66.225.198.198"
+      },
+      "colocrossing.com/lg.buf.colocrossing.com/": {
+        "url": "http://lg.buf.colocrossing.com/",
+        "provider": "colocrossing.com",
+        "city": "Buffalo",
+        "country": "US",
+        "ipv4": "192.3.180.103"
+      },
+      "colocrossing.com/lg.sea.colocrossing.com/": {
+        "url": "http://lg.sea.colocrossing.com/",
+        "provider": "colocrossing.com",
+        "city": "Seattle",
+        "country": "US",
+        "ipv4": "75.127.12.12"
+      },
+      "colocrossing.com/lg.sj.colocrossing.com/": {
+        "url": "http://lg.sj.colocrossing.com/",
+        "provider": "colocrossing.com",
+        "city": "Santa Clara",
+        "country": "US",
+        "ipv4": "23.94.100.22"
+      },
+      "kuroit.com/tx-us.lg.kuroit.com/": {
+        "url": "https://tx-us.lg.kuroit.com/",
+        "provider": "kuroit.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "45.67.87.2"
+      },
+      "kuroit.com/fl-us.lg.kuroit.com/": {
+        "url": "https://fl-us.lg.kuroit.com/",
+        "provider": "kuroit.com",
+        "city": "Tampa",
+        "country": "US",
+        "ipv4": "45.134.110.2"
+      },
+      "kuroit.com/us.lg.kuroit.com/": {
+        "url": "https://us.lg.kuroit.com/",
+        "provider": "kuroit.com",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "185.216.72.2"
+      },
+      "dedioutlet.com/lg.dedioutlet.com/": {
+        "url": "https://lg.dedioutlet.com/",
+        "provider": "dedioutlet.com",
+        "city": "North Kansas City",
+        "country": "US",
+        "ipv4": "104.167.220.1"
+      },
+      "cloudserver.net/lg-ny.cloudserver.net/": {
+        "url": "http://lg-ny.cloudserver.net/",
+        "provider": "cloudserver.net",
+        "city": "Buffalo",
+        "country": "US",
+        "ipv4": "198.12.80.150"
+      },
+      "cloudserver.net/lg-lax.cloudserver.net/": {
+        "url": "http://lg-lax.cloudserver.net/",
+        "provider": "cloudserver.net",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "23.94.112.150"
+      },
+      "serverhub.com/lg-chicago.serverhub.com/": {
+        "url": "http://lg-chicago.serverhub.com/",
+        "provider": "serverhub.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "50.3.188.6"
+      },
+      "serverhub.com/lg-phoenix.serverhub.com/": {
+        "url": "http://lg-phoenix.serverhub.com/",
+        "provider": "serverhub.com",
+        "city": "Seattle",
+        "country": "US",
+        "ipv4": "104.140.1.37"
+      },
+      "serverhub.com/lg-losangeles.serverhub.com/": {
+        "url": "http://lg-losangeles.serverhub.com/",
+        "provider": "serverhub.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "104.206.211.230"
+      },
+      "serverhub.com/lg-seattle.serverhub.com/": {
+        "url": "http://lg-seattle.serverhub.com/",
+        "provider": "serverhub.com",
+        "city": "Seattle",
+        "country": "US",
+        "ipv4": "104.140.17.85"
+      },
+      "terrahost.com/lg.kc-us.terrahost.com/": {
+        "url": "https://lg.kc-us.terrahost.com/",
+        "provider": "terrahost.com",
+        "city": "Kansas City",
+        "country": "US",
+        "ipv4": "193.243.189.8"
+      },
+      "atomicnetworks.co/lg-us-mia.atomicnetworks.co/": {
+        "url": "https://lg-us-mia.atomicnetworks.co/",
+        "provider": "atomicnetworks.co",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "50.114.37.2"
+      },
+      "atomicnetworks.co/lg-us-chi.atomicnetworks.co/": {
+        "url": "http://lg-us-chi.atomicnetworks.co/",
+        "provider": "atomicnetworks.co",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "23.146.184.1"
+      },
+      "atomicnetworks.co/lg-us-lax.atomicnetworks.co/": {
+        "url": "https://lg-us-lax.atomicnetworks.co/",
+        "provider": "atomicnetworks.co",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "50.114.35.2"
+      },
+      "purevoltage.com/lg.nyc.purevoltage.com/": {
+        "url": "https://lg.nyc.purevoltage.com/",
+        "provider": "purevoltage.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "169.197.82.69"
+      },
+      "spartanhost.net/lg.sea.spartanhost.net/": {
+        "url": "http://lg.sea.spartanhost.net/",
+        "provider": "spartanhost.net",
+        "city": "Seattle",
+        "country": "US",
+        "ipv4": "104.218.232.78"
+      },
+      "spartanhost.net/lg.dal.spartanhost.net/": {
+        "url": "http://lg.dal.spartanhost.net/",
+        "provider": "spartanhost.net",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "65.75.210.42"
+      },
+      "linveo.com/lg-ohio.linveo.com/": {
+        "url": "https://lg-ohio.linveo.com/",
+        "provider": "linveo.com",
+        "city": "Columbus",
+        "country": "US",
+        "ipv4": "104.234.231.162"
+      },
+      "linveo.com/lg-texas.linveo.com/": {
+        "url": "https://lg-texas.linveo.com/",
+        "provider": "linveo.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "45.38.58.196"
+      },
+      "as210630.net/lblk-lg.as210630.net/": {
+        "url": "https://lblk-lg.as210630.net/",
+        "provider": "as210630.net",
+        "city": "Liberty Lake",
+        "country": "US",
+        "ipv4": "23.184.48.7"
+      },
+      "as210630.net/pa-lg.as210630.net/": {
+        "url": "https://pa-lg.as210630.net/",
+        "provider": "as210630.net",
+        "city": "Allentown",
+        "country": "US",
+        "ipv4": "23.137.253.5"
+      },
+      "isplevel.com/lg-us.isplevel.com/": {
+        "url": "http://lg-us.isplevel.com/",
+        "provider": "isplevel.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "107.181.187.131"
+      },
+      "isplevel.com/lg-us2.isplevel.com/": {
+        "url": "http://lg-us2.isplevel.com/",
+        "provider": "isplevel.com",
+        "city": "Secaucus",
+        "country": "US",
+        "ipv4": "195.123.233.46"
+      },
+      "hostus.us/dal-lg.hostus.us/": {
+        "url": "http://dal-lg.hostus.us/",
+        "provider": "hostus.us",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "104.128.239.2"
+      },
+      "impactvps.com/lg-dal.impactvps.com/": {
+        "url": "https://lg-dal.impactvps.com/",
+        "provider": "impactvps.com",
+        "city": "Abilene",
+        "country": "US",
+        "ipv4": "172.110.8.39"
+      },
+      "impactvps.com/lg-sea.impactvps.com/": {
+        "url": "https://lg-sea.impactvps.com/",
+        "provider": "impactvps.com",
+        "city": "Amarillo",
+        "country": "US",
+        "ipv4": "172.110.7.25"
+      },
+      "impactvps.com/lg-nyc.impactvps.com/": {
+        "url": "https://lg-nyc.impactvps.com/",
+        "provider": "impactvps.com",
+        "city": "Abilene",
+        "country": "US",
+        "ipv4": "172.110.9.39"
+      },
+      "breezehost.io/clt-lg.breezehost.io/": {
+        "url": "http://clt-lg.breezehost.io/",
+        "provider": "breezehost.io",
+        "city": "Charlotte",
+        "country": "US",
+        "ipv4": "45.94.168.133"
+      },
+      "breezehost.io/dal-lg.breezehost.io/": {
+        "url": "http://dal-lg.breezehost.io/",
+        "provider": "breezehost.io",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "98.142.246.93"
+      },
+      "cloudnium.net/lg-dal.cloudnium.net/": {
+        "url": "http://lg-dal.cloudnium.net/",
+        "provider": "cloudnium.net",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "23.26.137.12"
+      },
+      "hosthatch.com/lg.ny.hosthatch.com/": {
+        "url": "http://lg.ny.hosthatch.com/",
+        "provider": "hosthatch.com",
+        "city": "New York",
+        "country": "US",
+        "ipv4": "185.213.26.26"
+      },
+      "f4.fo/lg.f4.fo/": {
+        "url": "https://lg.f4.fo/",
+        "provider": "f4.fo",
+        "city": "Kansas City",
+        "country": "US",
+        "ipv4": "23.150.40.30"
+      },
+      "ramnode.com/lg.la.ramnode.com/": {
+        "url": "http://lg.la.ramnode.com/",
+        "provider": "ramnode.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "168.235.72.22"
+      },
+      "ramnode.com/lg.sea.ramnode.com/": {
+        "url": "http://lg.sea.ramnode.com/",
+        "provider": "ramnode.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "23.226.229.4"
+      },
+      "ramnode.com/lg.nyc.ramnode.com/": {
+        "url": "http://lg.nyc.ramnode.com/",
+        "provider": "ramnode.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "107.191.96.26"
+      },
+      "spinservers.com/dal-lg.spinservers.com/": {
+        "url": "http://dal-lg.spinservers.com/",
+        "provider": "spinservers.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "104.37.173.20"
+      },
+      "spinservers.com/sjc-lg.spinservers.com/": {
+        "url": "http://sjc-lg.spinservers.com/",
+        "provider": "spinservers.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "192.30.242.74"
+      },
+      "dashserv.io/lg.dashserv.io/": {
+        "url": "https://lg.dashserv.io/",
+        "provider": "dashserv.io",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "85.202.163.80"
+      },
+      "digidedi.com/lg-dallas.digidedi.com/": {
+        "url": "http://lg-dallas.digidedi.com/",
+        "provider": "digidedi.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "85.117.242.113"
+      },
+      "digidedi.com/lg-mia.digidedi.com/": {
+        "url": "http://lg-mia.digidedi.com/",
+        "provider": "digidedi.com",
+        "city": "Miami",
+        "country": "US",
+        "ipv4": "166.1.209.139"
+      },
+      "serverhost.com/buf.lg.serverhost.com/": {
+        "url": "https://buf.lg.serverhost.com/",
+        "provider": "serverhost.com",
+        "city": "Buffalo",
+        "country": "US",
+        "ipv4": "107.175.3.31"
+      },
+      "serverhost.com/chi.lg.serverhost.com/": {
+        "url": "https://chi.lg.serverhost.com/",
+        "provider": "serverhost.com",
+        "city": "Elk Grove Village",
+        "country": "US",
+        "ipv4": "192.3.118.141"
+      },
+      "serverhost.com/was.lg.serverhost.com/": {
+        "url": "https://was.lg.serverhost.com/",
+        "provider": "serverhost.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "173.232.195.185"
+      },
+      "serverhost.com/dal.lg.serverhost.com/": {
+        "url": "https://dal.lg.serverhost.com/",
+        "provider": "serverhost.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "198.23.133.161"
+      },
+      "serverhost.com/fra.lg.serverhost.com/": {
+        "url": "https://fra.lg.serverhost.com/",
+        "provider": "serverhost.com",
+        "city": "United States",
+        "country": "US",
+        "ipv4": "173.44.139.167"
+      },
+      "serverhost.com/la.lg.serverhost.com/": {
+        "url": "https://la.lg.serverhost.com/",
+        "provider": "serverhost.com",
+        "city": "Los Angeles",
+        "country": "US",
+        "ipv4": "198.23.251.23"
+      },
+      "eliteservermanagement.com/lg.eliteservermanagement.com/": {
+        "url": "https://lg.eliteservermanagement.com/",
+        "provider": "eliteservermanagement.com",
+        "city": "Dallas",
+        "country": "US",
+        "ipv4": "154.29.78.82"
+      }
+    },
+    "JP": {
+      "silicloud.com/lg-global-tyo01-jp.silicloud.com/": {
+        "url": "https://lg-global-tyo01-jp.silicloud.com/",
+        "provider": "silicloud.com",
+        "city": "Tokyo",
+        "country": "JP",
+        "ipv4": "38.47.52.200"
+      },
+      "silicloud.com/lg-global-tyo01-jp-cn2-v6.silicloud.com/": {
+        "url": "https://lg-global-tyo01-jp-cn2-v6.silicloud.com/",
+        "provider": "silicloud.com",
+        "city": "Tokyo",
+        "country": "JP",
+        "ipv4": "154.19.186.176"
+      },
+      "psychz.net/lg.jp.psychz.net/": {
+        "url": "http://lg.jp.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Tokyo",
+        "country": "JP",
+        "ipv4": "108.181.73.55"
+      },
+      "speedypage.com/tyo.lg.speedypage.com/": {
+        "url": "https://tyo.lg.speedypage.com/",
+        "provider": "speedypage.com",
+        "city": "Tokyo",
+        "country": "JP",
+        "ipv4": "45.249.89.6"
+      },
+      "1nextnet.com/jp.lg.1nextnet.com/": {
+        "url": "https://jp.lg.1nextnet.com/",
+        "provider": "1nextnet.com",
+        "city": "Tokyo",
+        "country": "JP",
+        "ipv4": "103.134.34.33"
+      },
+      "ransomit.com.au/tokyo-lg.ransomit.com.au/": {
+        "url": "http://tokyo-lg.ransomit.com.au/",
+        "provider": "ransomit.com.au",
+        "city": "Tokyo",
+        "country": "JP",
+        "ipv4": "180.149.230.12"
+      },
+      "webhosting24.com/lg.jp.webhosting24.com/": {
+        "url": "https://lg.jp.webhosting24.com/",
+        "provider": "webhosting24.com",
+        "city": "Tokyo",
+        "country": "JP",
+        "ipv4": "84.33.12.2"
+      }
+    },
+    "LT": {
+      "ultravps.eu/lg.sqq.lt.ultravps.eu/": {
+        "url": "http://lg.sqq.lt.ultravps.eu/",
+        "provider": "ultravps.eu",
+        "city": "Lithuania",
+        "country": "LT",
+        "ipv4": "185.177.150.4"
+      },
+      "bacloud.com/lg-lt-eu.bacloud.com/": {
+        "url": "http://lg-lt-eu.bacloud.com/",
+        "provider": "bacloud.com",
+        "city": "Lithuania",
+        "country": "LT",
+        "ipv4": "185.25.50.85"
+      },
+      "time4vps.eu/lg.time4vps.eu/": {
+        "url": "http://lg.time4vps.eu/",
+        "provider": "time4vps.eu",
+        "city": "Vilnius",
+        "country": "LT",
+        "ipv4": "212.24.110.207"
+      },
+      "hostens.com/lg.hostens.com/": {
+        "url": "http://lg.hostens.com/",
+        "provider": "hostens.com",
+        "city": "Lithuania",
+        "country": "LT",
+        "ipv4": "109.235.69.33"
+      },
+      "time4vps.com/lg.time4vps.com/": {
+        "url": "http://lg.time4vps.com/",
+        "provider": "time4vps.com",
+        "city": "Vilnius",
+        "country": "LT",
+        "ipv4": "212.24.110.207"
+      },
+      "serveroffer.net/lg.serveroffer.net/": {
+        "url": "http://lg.serveroffer.net/",
+        "provider": "serveroffer.net",
+        "city": "Kaunas",
+        "country": "LT",
+        "ipv4": "45.125.66.13"
+      }
+    },
+    "GB": {
+      "ultravps.eu/lg.lon.uk.ultravps.eu/": {
+        "url": "http://lg.lon.uk.ultravps.eu/",
+        "provider": "ultravps.eu",
+        "city": "London",
+        "country": "GB",
+        "ipv4": "185.177.148.4"
+      },
+      "alphavps.bg/lguk.alphavps.bg/": {
+        "url": "http://lguk.alphavps.bg/",
+        "provider": "alphavps.bg",
+        "city": "Islington",
+        "country": "GB",
+        "ipv4": "130.185.251.6"
+      },
+      "hosteroid.uk/ld-lg.hosteroid.uk/": {
+        "url": "https://ld-lg.hosteroid.uk/",
+        "provider": "hosteroid.uk",
+        "city": "Cricklewood",
+        "country": "GB",
+        "ipv4": "185.75.240.231"
+      },
+      "khanwebhost.com/uklg.khanwebhost.com/": {
+        "url": "https://uklg.khanwebhost.com/",
+        "provider": "khanwebhost.com",
+        "city": "Redditch",
+        "country": "GB",
+        "ipv4": "46.37.124.103"
+      },
+      "bacloud.com/lg-uk-eu.bacloud.com/": {
+        "url": "https://lg-uk-eu.bacloud.com/",
+        "provider": "bacloud.com",
+        "city": "United Kingdom",
+        "country": "GB",
+        "ipv4": "213.252.232.7"
+      },
+      "alphavps.com/lguk.alphavps.com/": {
+        "url": "http://lguk.alphavps.com/",
+        "provider": "alphavps.com",
+        "city": "Islington",
+        "country": "GB",
+        "ipv4": "130.185.251.6"
+      },
+      "psychz.net/lg.lon.psychz.net/": {
+        "url": "http://lg.lon.psychz.net/",
+        "provider": "psychz.net",
+        "city": "London",
+        "country": "GB",
+        "ipv4": "108.181.67.248"
+      },
+      "layer.ae/cov-lg.layer.ae/": {
+        "url": "https://cov-lg.layer.ae/",
+        "provider": "layer.ae",
+        "city": "United Kingdom",
+        "country": "GB",
+        "ipv4": "207.2.121.3"
+      },
+      "speedypage.com/lon.lg.speedypage.com/": {
+        "url": "https://lon.lg.speedypage.com/",
+        "provider": "speedypage.com",
+        "city": "Tower Hamlets",
+        "country": "GB",
+        "ipv4": "45.139.227.46"
+      },
+      "solidseovps.com/lg-uk.solidseovps.com/speedtest/": {
+        "url": "http://lg-uk.solidseovps.com/speedtest/",
+        "provider": "solidseovps.com",
+        "city": "London",
+        "country": "GB",
+        "ipv4": "149.5.1.254"
+      },
+      "kuroit.com/uk.lg.kuroit.com/": {
+        "url": "https://uk.lg.kuroit.com/",
+        "provider": "kuroit.com",
+        "city": "London",
+        "country": "GB",
+        "ipv4": "178.239.171.5"
+      },
+      "as207108.net/cov-lg.as207108.net/": {
+        "url": "http://cov-lg.as207108.net/",
+        "provider": "as207108.net",
+        "city": "London",
+        "country": "GB",
+        "ipv4": "185.139.7.79"
+      },
+      "as207108.net/lon-lg.as207108.net/": {
+        "url": "http://lon-lg.as207108.net/",
+        "provider": "as207108.net",
+        "city": "London",
+        "country": "GB",
+        "ipv4": "77.75.124.35"
+      },
+      "prepaid-host.com/lg.prepaid-host.com/": {
+        "url": "https://lg.prepaid-host.com/",
+        "provider": "prepaid-host.com",
+        "city": "London",
+        "country": "GB",
+        "ipv4": "80.75.218.254"
+      },
+      "xhosts.uk/lg.xhosts.uk/": {
+        "url": "http://lg.xhosts.uk/",
+        "provider": "xhosts.uk",
+        "city": "United Kingdom",
+        "country": "GB",
+        "ipv4": "23.26.114.107"
+      },
+      "hostus.us/lon-lg.hostus.us/": {
+        "url": "http://lon-lg.hostus.us/",
+        "provider": "hostus.us",
+        "city": "London",
+        "country": "GB",
+        "ipv4": "83.143.116.6"
+      },
+      "agiletechsolutions.co.uk/lg.agiletechsolutions.co.uk/": {
+        "url": "https://lg.agiletechsolutions.co.uk/",
+        "provider": "agiletechsolutions.co.uk",
+        "city": "United Kingdom",
+        "country": "GB",
+        "ipv4": "92.60.44.244"
+      },
+      "myhbd.net/lg-uk.myhbd.net/": {
+        "url": "http://lg-uk.myhbd.net/",
+        "provider": "myhbd.net",
+        "city": "United Kingdom",
+        "country": "GB",
+        "ipv4": "81.94.196.173"
+      },
+      "mlnl.host/uk.lg.mlnl.host/": {
+        "url": "http://uk.lg.mlnl.host/",
+        "provider": "mlnl.host",
+        "city": "Lincolnshire",
+        "country": "GB",
+        "ipv4": "139.28.207.1"
+      }
+    },
+    "DE": {
+      "ultravps.eu/lg.dus.de.ultravps.eu/": {
+        "url": "http://lg.dus.de.ultravps.eu/",
+        "provider": "ultravps.eu",
+        "city": "Germany",
+        "country": "DE",
+        "ipv4": "130.255.76.147"
+      },
+      "alphavps.bg/lgde.alphavps.bg/": {
+        "url": "http://lgde.alphavps.bg/",
+        "provider": "alphavps.bg",
+        "city": "Nuremberg",
+        "country": "DE",
+        "ipv4": "194.35.12.68"
+      },
+      "alphavps.com/lgde.alphavps.com/": {
+        "url": "http://lgde.alphavps.com/",
+        "provider": "alphavps.com",
+        "city": "Nuremberg",
+        "country": "DE",
+        "ipv4": "194.35.12.68"
+      },
+      "aurologic.com/lg.aurologic.com/": {
+        "url": "https://lg.aurologic.com/",
+        "provider": "aurologic.com",
+        "city": "Frankfurt am Main",
+        "country": "DE",
+        "ipv4": "160.20.144.59"
+      },
+      "first-root.com/lg.first-root.com/": {
+        "url": "http://lg.first-root.com/",
+        "provider": "first-root.com",
+        "city": "Dusseldorf",
+        "country": "DE",
+        "ipv4": "91.228.52.15"
+      },
+      "hostslick.com/lg.hostslick.com/": {
+        "url": "https://lg.hostslick.com/",
+        "provider": "hostslick.com",
+        "city": "Germany",
+        "country": "DE",
+        "ipv4": "193.142.146.46"
+      },
+      "signaltransmitter.de/lg.signaltransmitter.de/": {
+        "url": "https://lg.signaltransmitter.de/",
+        "provider": "signaltransmitter.de",
+        "city": "Germany",
+        "country": "DE",
+        "ipv4": "185.240.241.171"
+      },
+      "serverhub.com/lg-frankfurt.serverhub.com/": {
+        "url": "http://lg-frankfurt.serverhub.com/",
+        "provider": "serverhub.com",
+        "city": "Frankfurt am Main",
+        "country": "DE",
+        "ipv4": "185.137.137.5"
+      },
+      "packets-decreaser.net/lg.packets-decreaser.net/": {
+        "url": "https://lg.packets-decreaser.net/",
+        "provider": "packets-decreaser.net",
+        "city": "Germany",
+        "country": "DE",
+        "ipv4": "45.90.96.250"
+      },
+      "obhost.org/lg-de.obhost.org/": {
+        "url": "http://lg-de.obhost.org/",
+        "provider": "obhost.org",
+        "city": "Frankfurt am Main",
+        "country": "DE",
+        "ipv4": "152.89.245.245"
+      },
+      "prohosting24.de/lg.prohosting24.de/": {
+        "url": "http://lg.prohosting24.de/",
+        "provider": "prohosting24.de",
+        "city": "Germany",
+        "country": "DE",
+        "ipv4": "37.114.55.121"
+      },
+      "harmony-solutions.de/lg.harmony-solutions.de/": {
+        "url": "https://lg.harmony-solutions.de/",
+        "provider": "harmony-solutions.de",
+        "city": "Germany",
+        "country": "DE",
+        "ipv4": "185.254.99.222"
+      },
+      "active-servers.com/lg.active-servers.com/": {
+        "url": "http://lg.active-servers.com/",
+        "provider": "active-servers.com",
+        "city": "Germany",
+        "country": "DE",
+        "ipv4": "91.217.251.2"
+      },
+      "deinserverhost.de/lg.deinserverhost.de/": {
+        "url": "https://lg.deinserverhost.de/",
+        "provider": "deinserverhost.de",
+        "city": "Frankfurt am Main",
+        "country": "DE",
+        "ipv4": "91.200.102.128"
+      },
+      "lowhosting.com/lg.lowhosting.com/": {
+        "url": "https://lg.lowhosting.com/",
+        "provider": "lowhosting.com",
+        "city": "Frankfurt am Main",
+        "country": "DE",
+        "ipv4": "152.89.254.222"
+      }
+    },
+    "NL": {
+      "ultravps.eu/lg.ams.nl.ultravps.eu/": {
+        "url": "http://lg.ams.nl.ultravps.eu/",
+        "provider": "ultravps.eu",
+        "city": "Haarlem",
+        "country": "NL",
+        "ipv4": "185.45.112.15"
+      },
+      "hostslim.nl/lg.hostslim.nl/": {
+        "url": "https://lg.hostslim.nl/",
+        "provider": "hostslim.nl",
+        "city": "Netherlands",
+        "country": "NL",
+        "ipv4": "103.219.154.62"
+      },
+      "hostshield.net/lg-nl.hostshield.net/": {
+        "url": "http://lg-nl.hostshield.net/",
+        "provider": "hostshield.net",
+        "city": "Netherlands",
+        "country": "NL",
+        "ipv4": "193.142.59.82"
+      },
+      "bacloud.com/lg-nl-eu.bacloud.com/": {
+        "url": "http://lg-nl-eu.bacloud.com/",
+        "provider": "bacloud.com",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "88.119.171.50"
+      },
+      "hostmayo.com/lgnl.hostmayo.com/": {
+        "url": "https://lgnl.hostmayo.com/",
+        "provider": "hostmayo.com",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "169.239.130.2"
+      },
+      "racknerd.com/lg-ams.racknerd.com/": {
+        "url": "http://lg-ams.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "23.94.101.88"
+      },
+      "psychz.net/lg.ams.psychz.net/": {
+        "url": "http://lg.ams.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "108.181.59.250"
+      },
+      "liteserver.nl/lg-drn.liteserver.nl/": {
+        "url": "https://lg-drn.liteserver.nl/",
+        "provider": "liteserver.nl",
+        "city": "Dronten",
+        "country": "NL",
+        "ipv4": "185.31.172.235"
+      },
+      "server-factory.com/lg.nl.server-factory.com/": {
+        "url": "https://lg.nl.server-factory.com/",
+        "provider": "server-factory.com",
+        "city": "Eygelshoven",
+        "country": "NL",
+        "ipv4": "31.41.249.10"
+      },
+      "solidseovps.com/lg-nl.solidseovps.com/speedtest/": {
+        "url": "http://lg-nl.solidseovps.com/speedtest/",
+        "provider": "solidseovps.com",
+        "city": "Haarlem",
+        "country": "NL",
+        "ipv4": "149.5.4.225"
+      },
+      "starrydns.com/nl1.lg.starrydns.com/": {
+        "url": "http://nl1.lg.starrydns.com/",
+        "provider": "starrydns.com",
+        "city": "Netherlands",
+        "country": "NL",
+        "ipv4": "185.170.209.5"
+      },
+      "kuroit.com/nl.lg.kuroit.com/": {
+        "url": "https://nl.lg.kuroit.com/",
+        "provider": "kuroit.com",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "109.205.214.58"
+      },
+      "alexhost.com/lg-nl.alexhost.com/": {
+        "url": "https://lg-nl.alexhost.com/",
+        "provider": "alexhost.com",
+        "city": "Almere Stad",
+        "country": "NL",
+        "ipv4": "193.233.161.30"
+      },
+      "hizakura.nl/lg.hizakura.nl/": {
+        "url": "https://lg.hizakura.nl/",
+        "provider": "hizakura.nl",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "194.147.221.2"
+      },
+      "terrahost.com/lg.ams-nl.terrahost.com/": {
+        "url": "https://lg.ams-nl.terrahost.com/",
+        "provider": "terrahost.com",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "45.88.200.26"
+      },
+      "atomicnetworks.co/lg-nl-eyg.atomicnetworks.co/": {
+        "url": "https://lg-nl-eyg.atomicnetworks.co/",
+        "provider": "atomicnetworks.co",
+        "city": "Eygelshoven",
+        "country": "NL",
+        "ipv4": "204.137.14.2"
+      },
+      "servervy.com/lg.servervy.com/": {
+        "url": "https://lg.servervy.com/",
+        "provider": "servervy.com",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "81.161.238.38"
+      },
+      "as210630.net/nl-lg.as210630.net/": {
+        "url": "https://nl-lg.as210630.net/",
+        "provider": "as210630.net",
+        "city": "Naaldwijk",
+        "country": "NL",
+        "ipv4": "23.137.250.50"
+      },
+      "isplevel.com/lg-nl.isplevel.com/": {
+        "url": "http://lg-nl.isplevel.com/",
+        "provider": "isplevel.com",
+        "city": "Meppel",
+        "country": "NL",
+        "ipv4": "185.14.30.167"
+      },
+      "hostio.solutions/lg.hostio.solutions/": {
+        "url": "https://lg.hostio.solutions/",
+        "provider": "hostio.solutions",
+        "city": "Netherlands",
+        "country": "NL",
+        "ipv4": "45.144.244.29"
+      },
+      "hybula.net/lg-nl-ams.hybula.net/": {
+        "url": "https://lg-nl-ams.hybula.net/",
+        "provider": "hybula.net",
+        "city": "Netherlands",
+        "country": "NL",
+        "ipv4": "2.58.57.56"
+      },
+      "hosthatch.com/lg.ams.hosthatch.com/": {
+        "url": "http://lg.ams.hosthatch.com/",
+        "provider": "hosthatch.com",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "83.138.53.15"
+      },
+      "ramnode.com/lg.nl.ramnode.com/": {
+        "url": "http://lg.nl.ramnode.com/",
+        "provider": "ramnode.com",
+        "city": "Netherlands",
+        "country": "NL",
+        "ipv4": "176.56.238.3"
+      },
+      "blazingfast.io/lg.nl.blazingfast.io/": {
+        "url": "https://lg.nl.blazingfast.io/",
+        "provider": "blazingfast.io",
+        "city": "Netherlands",
+        "country": "NL",
+        "ipv4": "188.93.233.106"
+      },
+      "serverhost.com/ams.lg.serverhost.com/": {
+        "url": "https://ams.lg.serverhost.com/",
+        "provider": "serverhost.com",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ipv4": "192.210.175.22"
+      },
+      "athorio.com/lg.athorio.com/": {
+        "url": "https://lg.athorio.com/",
+        "provider": "athorio.com",
+        "city": "Heerlen",
+        "country": "NL",
+        "ipv4": "141.11.112.4"
+      }
+    },
+    "BG": {
+      "alphavps.bg/lgbg.alphavps.bg/": {
+        "url": "http://lgbg.alphavps.bg/",
+        "provider": "alphavps.bg",
+        "city": "Sofia",
+        "country": "BG",
+        "ipv4": "79.124.7.8"
+      },
+      "alphavps.com/lgbg.alphavps.com/": {
+        "url": "http://lgbg.alphavps.com/",
+        "provider": "alphavps.com",
+        "city": "Sofia",
+        "country": "BG",
+        "ipv4": "79.124.7.8"
+      },
+      "aquatis.host/ams.lg.aquatis.host/": {
+        "url": "https://ams.lg.aquatis.host/",
+        "provider": "aquatis.host",
+        "city": "Bulgaria",
+        "country": "BG",
+        "ipv4": "45.67.13.10"
+      },
+      "isplevel.com/lg-bg.isplevel.com/": {
+        "url": "http://lg-bg.isplevel.com/",
+        "provider": "isplevel.com",
+        "city": "Sofia",
+        "country": "BG",
+        "ipv4": "185.82.218.203"
+      }
+    },
+    "RO": {
+      "hosteroid.uk/buc-lg.hosteroid.uk/": {
+        "url": "https://buc-lg.hosteroid.uk/",
+        "provider": "hosteroid.uk",
+        "city": "Bucharest",
+        "country": "RO",
+        "ipv4": "146.70.213.36"
+      },
+      "hazi.ro/romanian-lg1.hazi.ro/": {
+        "url": "https://romanian-lg1.hazi.ro/",
+        "provider": "hazi.ro",
+        "city": "Romania",
+        "country": "RO",
+        "ipv4": "188.241.240.250"
+      },
+      "host-c.com/lg-ro-or.host-c.com/": {
+        "url": "https://lg-ro-or.host-c.com/",
+        "provider": "host-c.com",
+        "city": "Romania",
+        "country": "RO",
+        "ipv4": "193.32.87.2"
+      },
+      "hosterion.net/cluj.lg.hosterion.net/": {
+        "url": "http://cluj.lg.hosterion.net/",
+        "provider": "hosterion.net",
+        "city": "Romania",
+        "country": "RO",
+        "ipv4": "185.250.105.14"
+      },
+      "hosterion.com/lg.clj.hosterion.com/": {
+        "url": "https://lg.clj.hosterion.com/",
+        "provider": "hosterion.com",
+        "city": "Romania",
+        "country": "RO",
+        "ipv4": "185.250.105.14"
+      }
+    },
+    "AT": {
+      "hosteroid.uk/vie-lg.hosteroid.uk/": {
+        "url": "https://vie-lg.hosteroid.uk/",
+        "provider": "hosteroid.uk",
+        "city": "Vienna",
+        "country": "AT",
+        "ipv4": "212.69.167.70"
+      },
+      "hosthatch.com/lg.vie.hosthatch.com/": {
+        "url": "http://lg.vie.hosthatch.com/",
+        "provider": "hosthatch.com",
+        "city": "Vienna",
+        "country": "AT",
+        "ipv4": "185.175.59.70"
+      }
+    },
+    "HK": {
+      "salmoncloud.co.uk/hkg.lg.salmoncloud.co.uk/": {
+        "url": "http://hkg.lg.salmoncloud.co.uk/",
+        "provider": "salmoncloud.co.uk",
+        "city": "Hong Kong",
+        "country": "HK",
+        "ipv4": "91.124.30.5"
+      },
+      "starrydns.com/hk4.lg.starrydns.com/": {
+        "url": "http://hk4.lg.starrydns.com/",
+        "provider": "starrydns.com",
+        "city": "Hong Kong",
+        "country": "HK",
+        "ipv4": "103.56.217.77"
+      },
+      "spiketelecom.com/lg-hk1.01.spiketelecom.com/": {
+        "url": "https://lg-hk1.01.spiketelecom.com/",
+        "provider": "spiketelecom.com",
+        "city": "Hong Kong",
+        "country": "HK",
+        "ipv4": "89.213.0.10"
+      },
+      "spiketelecom.com/lg-hk1.02.spiketelecom.com/": {
+        "url": "https://lg-hk1.02.spiketelecom.com/",
+        "provider": "spiketelecom.com",
+        "city": "Hong Kong",
+        "country": "HK",
+        "ipv4": "89.213.1.12"
+      },
+      "mlnl.host/hk.lg.mlnl.host/": {
+        "url": "http://hk.lg.mlnl.host/",
+        "provider": "mlnl.host",
+        "city": "Hong Kong",
+        "country": "HK",
+        "ipv4": "45.123.191.84"
+      },
+      "mlnl.host/hkd.lg.mlnl.host/": {
+        "url": "http://hkd.lg.mlnl.host/",
+        "provider": "mlnl.host",
+        "city": "Hong Kong",
+        "country": "HK",
+        "ipv4": "45.123.188.128"
+      },
+      "yxvm.com/lg.hkg-volume.beta.yxvm.com/": {
+        "url": "https://lg.hkg-volume.beta.yxvm.com/",
+        "provider": "yxvm.com",
+        "city": "Hong Kong",
+        "country": "HK",
+        "ipv4": "178.173.238.1"
+      }
+    },
+    "IN": {
+      "hostnamaste.com/lg-in.hostnamaste.com/": {
+        "url": "https://lg-in.hostnamaste.com/",
+        "provider": "hostnamaste.com",
+        "city": "Mumbai",
+        "country": "IN",
+        "ipv4": "129.227.218.229"
+      },
+      "advancedserverdns.com/lg-pune.advancedserverdns.com/": {
+        "url": "https://lg-pune.advancedserverdns.com/",
+        "provider": "advancedserverdns.com",
+        "city": "Pune",
+        "country": "IN",
+        "ipv4": "103.250.185.1"
+      },
+      "advancedserverdns.com/lg-delhi.advancedserverdns.com/": {
+        "url": "https://lg-delhi.advancedserverdns.com/",
+        "provider": "advancedserverdns.com",
+        "city": "Delhi",
+        "country": "IN",
+        "ipv4": "103.26.207.1"
+      },
+      "advancedserverdns.com/lg-mumbai.advancedserverdns.com/": {
+        "url": "https://lg-mumbai.advancedserverdns.com/",
+        "provider": "advancedserverdns.com",
+        "city": "Ghansoli",
+        "country": "IN",
+        "ipv4": "103.205.143.1"
+      },
+      "advancedserverdns.com/lg-bom2.advancedserverdns.com/": {
+        "url": "https://lg-bom2.advancedserverdns.com/",
+        "provider": "advancedserverdns.com",
+        "city": "Panvel",
+        "country": "IN",
+        "ipv4": "43.230.202.1"
+      },
+      "psychz.net/lg.in.psychz.net/": {
+        "url": "http://lg.in.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Mumbai",
+        "country": "IN",
+        "ipv4": "108.181.61.214"
+      },
+      "readydedis.com/lg.mum01.readydedis.com/": {
+        "url": "https://lg.mum01.readydedis.com/",
+        "provider": "readydedis.com",
+        "city": "Mumbai",
+        "country": "IN",
+        "ipv4": "103.150.30.3"
+      },
+      "digidedi.com/lg-india-dc02.digidedi.com/": {
+        "url": "http://lg-india-dc02.digidedi.com/",
+        "provider": "digidedi.com",
+        "city": "India",
+        "country": "IN",
+        "ipv4": "210.79.134.107"
+      }
+    },
+    "FR": {
+      "hostnamaste.com/lg-fr.hostnamaste.com/": {
+        "url": "https://lg-fr.hostnamaste.com/",
+        "provider": "hostnamaste.com",
+        "city": "France",
+        "country": "FR",
+        "ipv4": "54.38.124.154"
+      },
+      "racknerd.com/lg-fr.racknerd.com/": {
+        "url": "http://lg-fr.racknerd.com/",
+        "provider": "racknerd.com",
+        "city": "Strasbourg",
+        "country": "FR",
+        "ipv4": "45.95.173.2"
+      },
+      "hazi.ro/german-lg2.hazi.ro/": {
+        "url": "https://german-lg2.hazi.ro/",
+        "provider": "hazi.ro",
+        "city": "France",
+        "country": "FR",
+        "ipv4": "51.77.85.115"
+      },
+      "obhost.org/lg-po.obhost.org/": {
+        "url": "http://lg-po.obhost.org/",
+        "provider": "obhost.org",
+        "city": "France",
+        "country": "FR",
+        "ipv4": "54.38.49.227"
+      },
+      "myhbd.net/lg-fr.myhbd.net/": {
+        "url": "http://lg-fr.myhbd.net/",
+        "provider": "myhbd.net",
+        "city": "France",
+        "country": "FR",
+        "ipv4": "149.202.120.112"
+      },
+      "happybeehost.com/lg-fr.happybeehost.com/": {
+        "url": "https://lg-fr.happybeehost.com/",
+        "provider": "happybeehost.com",
+        "city": "Paris",
+        "country": "FR",
+        "ipv4": "92.222.150.36"
+      }
+    },
+    "PK": {
+      "virtury.com/lg.virtury.com/": {
+        "url": "https://lg.virtury.com/",
+        "provider": "virtury.com",
+        "city": "Islamabad",
+        "country": "PK",
+        "ipv4": "103.151.111.249"
+      }
+    },
+    "PT": {
+      "advancedserverdns.com/lg-portugal.advancedserverdns.com/": {
+        "url": "http://lg-portugal.advancedserverdns.com/",
+        "provider": "advancedserverdns.com",
+        "city": "Lisbon",
+        "country": "PT",
+        "ipv4": "188.208.143.254"
+      }
+    },
+    "CA": {
+      "extravm.com/bhs.lg.extravm.com/": {
+        "url": "https://bhs.lg.extravm.com/",
+        "provider": "extravm.com",
+        "city": "Canada",
+        "country": "CA",
+        "ipv4": "142.44.222.123"
+      },
+      "hostry.com/lg-ca1.hostry.com/": {
+        "url": "http://lg-ca1.hostry.com/",
+        "provider": "hostry.com",
+        "city": "Toronto",
+        "country": "CA",
+        "ipv4": "91.194.11.43"
+      }
+    },
+    "SG": {
+      "extravm.com/sgp.lg.extravm.com/": {
+        "url": "https://sgp.lg.extravm.com/",
+        "provider": "extravm.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "216.146.26.1"
+      },
+      "psychz.net/lg.sin.psychz.net/": {
+        "url": "http://lg.sin.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "103.126.138.20"
+      },
+      "layer.ae/sgp-lg.layer.ae/": {
+        "url": "https://sgp-lg.layer.ae/",
+        "provider": "layer.ae",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "207.2.122.3"
+      },
+      "speedypage.com/sg.lg.speedypage.com/": {
+        "url": "https://sg.lg.speedypage.com/",
+        "provider": "speedypage.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "194.9.62.3"
+      },
+      "starrydns.com/sg1.lg.starrydns.com/": {
+        "url": "http://sg1.lg.starrydns.com/",
+        "provider": "starrydns.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "103.200.96.132"
+      },
+      "readydedis.com/lg.sg01.readydedis.com/": {
+        "url": "https://lg.sg01.readydedis.com/",
+        "provider": "readydedis.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "103.150.31.3"
+      },
+      "kuroit.com/sg.lg.kuroit.com/": {
+        "url": "https://sg.lg.kuroit.com/",
+        "provider": "kuroit.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "23.27.101.2"
+      },
+      "ransomit.com.au/singapore-lg.ransomit.com.au/": {
+        "url": "http://singapore-lg.ransomit.com.au/",
+        "provider": "ransomit.com.au",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "103.216.223.20"
+      },
+      "webhosting24.com/lg.sg.webhosting24.com/": {
+        "url": "https://lg.sg.webhosting24.com/",
+        "provider": "webhosting24.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "84.33.16.2"
+      },
+      "isplevel.com/lg-sg.isplevel.com/": {
+        "url": "http://lg-sg.isplevel.com/",
+        "provider": "isplevel.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "195.123.237.66"
+      },
+      "readyserver.sg/speedtest.readyserver.sg/": {
+        "url": "http://speedtest.readyserver.sg/",
+        "provider": "readyserver.sg",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "103.47.209.18"
+      },
+      "itldc.com/lg-sin.itldc.com/": {
+        "url": "http://lg-sin.itldc.com/",
+        "provider": "itldc.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "195.123.238.9"
+      },
+      "expertvm.com/lg.expertvm.com/": {
+        "url": "http://lg.expertvm.com/",
+        "provider": "expertvm.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "103.11.143.30"
+      },
+      "vebble.com/sgp.lg.vebble.com/": {
+        "url": "https://sgp.lg.vebble.com/",
+        "provider": "vebble.com",
+        "city": "Singapore",
+        "country": "SG",
+        "ipv4": "146.19.100.48"
+      }
+    },
+    "LV": {
+      "veesp.com/lv-lg.veesp.com/": {
+        "url": "http://lv-lg.veesp.com/",
+        "provider": "veesp.com",
+        "city": "Riga",
+        "country": "LV",
+        "ipv4": "212.6.44.33"
+      },
+      "isplevel.com/lg-lv.isplevel.com/": {
+        "url": "http://lg-lv.isplevel.com/",
+        "provider": "isplevel.com",
+        "city": "Riga",
+        "country": "LV",
+        "ipv4": "195.123.213.21"
+      }
+    },
+    "RU": {
+      "veesp.com/ru-lg.veesp.com/": {
+        "url": "http://ru-lg.veesp.com/",
+        "provider": "veesp.com",
+        "city": "St Petersburg",
+        "country": "RU",
+        "ipv4": "77.73.67.36"
+      },
+      "veesp.com/lg.veesp.com/": {
+        "url": "http://lg.veesp.com/",
+        "provider": "veesp.com",
+        "city": "St Petersburg",
+        "country": "RU",
+        "ipv4": "94.242.57.101"
+      },
+      "psychz.net/lg.svo.psychz.net/": {
+        "url": "https://lg.svo.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Moscow",
+        "country": "RU",
+        "ipv4": "108.181.60.199"
+      },
+      "isplevel.com/lg-ru.isplevel.com/": {
+        "url": "http://lg-ru.isplevel.com/",
+        "provider": "isplevel.com",
+        "city": "Russia",
+        "country": "RU",
+        "ipv4": "5.101.88.6"
+      },
+      "vstoike.ru/lg.vstoike.ru/": {
+        "url": "http://lg.vstoike.ru/",
+        "provider": "vstoike.ru",
+        "city": "St Petersburg",
+        "country": "RU",
+        "ipv4": "94.242.57.101"
+      },
+      "serverum.com/ru-lg.serverum.com/": {
+        "url": "http://ru-lg.serverum.com/",
+        "provider": "serverum.com",
+        "city": "Russia",
+        "country": "RU",
+        "ipv4": "192.144.36.189"
+      }
+    },
+    "ES": {
+      "ginernet.com/lg.ginernet.com/": {
+        "url": "http://lg.ginernet.com/",
+        "provider": "ginernet.com",
+        "city": "Madrid",
+        "country": "ES",
+        "ipv4": "188.213.6.40"
+      },
+      "psychz.net/lg.bcn.psychz.net/": {
+        "url": "http://lg.bcn.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Barcelona",
+        "country": "ES",
+        "ipv4": "108.181.70.253"
+      }
+    },
+    "ZA": {
+      "psychz.net/lg.jnb.psychz.net/": {
+        "url": "http://lg.jnb.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Johannesburg",
+        "country": "ZA",
+        "ipv4": "108.181.120.247"
+      }
+    },
+    "KR": {
+      "psychz.net/lg.icn.psychz.net/": {
+        "url": "https://lg.icn.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Seoul",
+        "country": "KR",
+        "ipv4": "108.181.51.92"
+      }
+    },
+    "AU": {
+      "psychz.net/lg.syd.psychz.net/": {
+        "url": "http://lg.syd.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Sydney",
+        "country": "AU",
+        "ipv4": "108.181.64.80"
+      },
+      "flowvps.com/lg.flowvps.com/": {
+        "url": "http://lg.flowvps.com/",
+        "provider": "flowvps.com",
+        "city": "Sydney",
+        "country": "AU",
+        "ipv4": "195.114.14.50"
+      },
+      "quantumcore.com.au/lg.quantumcore.com.au/": {
+        "url": "https://lg.quantumcore.com.au/",
+        "provider": "quantumcore.com.au",
+        "city": "Australia",
+        "country": "AU",
+        "ipv4": "103.246.250.3"
+      },
+      "x4b.net/lg.x4b.net/": {
+        "url": "https://lg.x4b.net/",
+        "provider": "x4b.net",
+        "city": "Australia",
+        "country": "AU",
+        "ipv4": "103.77.224.2"
+      },
+      "webhosting24.com/lg.au.webhosting24.com/": {
+        "url": "https://lg.au.webhosting24.com/",
+        "provider": "webhosting24.com",
+        "city": "Sydney",
+        "country": "AU",
+        "ipv4": "84.33.15.2"
+      }
+    },
+    "BR": {
+      "psychz.net/lg.sao.psychz.net/": {
+        "url": "http://lg.sao.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Sao Paulo",
+        "country": "BR",
+        "ipv4": "108.181.69.242"
+      }
+    },
+    "TW": {
+      "psychz.net/lg.tw.psychz.net/": {
+        "url": "http://lg.tw.psychz.net/",
+        "provider": "psychz.net",
+        "city": "Taipei",
+        "country": "TW",
+        "ipv4": "103.59.110.170"
+      }
+    },
+    "SE": {
+      "server-factory.com/lg.se.server-factory.com/": {
+        "url": "https://lg.se.server-factory.com/",
+        "provider": "server-factory.com",
+        "city": "Stockholm",
+        "country": "SE",
+        "ipv4": "185.153.55.9"
+      },
+      "alexhost.com/lg-se.alexhost.com/": {
+        "url": "https://lg-se.alexhost.com/",
+        "provider": "alexhost.com",
+        "city": "Sweden",
+        "country": "SE",
+        "ipv4": "45.93.9.30"
+      },
+      "swedendedicated.com/lg.swedendedicated.com/": {
+        "url": "http://lg.swedendedicated.com/",
+        "provider": "swedendedicated.com",
+        "city": "Stockholm",
+        "country": "SE",
+        "ipv4": "193.105.134.3"
+      }
+    },
+    "SK": {
+      "profvds.com/lg.profvds.com/": {
+        "url": "https://lg.profvds.com/",
+        "provider": "profvds.com",
+        "city": "Slovakia",
+        "country": "SK",
+        "ipv4": "91.242.163.12"
+      }
+    },
+    "TR": {
+      "rabisu.com/lg.rabisu.com/": {
+        "url": "https://lg.rabisu.com/",
+        "provider": "rabisu.com",
+        "city": "Turkiye",
+        "country": "TR",
+        "ipv4": "45.155.125.40"
+      },
+      "myhbd.net/lg-tr.myhbd.net/": {
+        "url": "http://lg-tr.myhbd.net/",
+        "provider": "myhbd.net",
+        "city": "Turkiye",
+        "country": "TR",
+        "ipv4": "213.142.133.122"
+      }
+    },
+    "NO": {
+      "terrahost.com/lg.terrahost.com/": {
+        "url": "https://lg.terrahost.com/",
+        "provider": "terrahost.com",
+        "city": "Sandefjord",
+        "country": "NO",
+        "ipv4": "185.125.168.212"
+      }
+    },
+    "MY": {
+      "nickyzai.com/lg.nickyzai.com:8082/": {
+        "url": "http://lg.nickyzai.com:8082/",
+        "provider": "nickyzai.com",
+        "city": "Malaysia",
+        "country": "MY",
+        "ipv4": "103.246.91.146"
+      }
+    },
+    "UA": {
+      "isplevel.com/lg-ua.isplevel.com/": {
+        "url": "http://lg-ua.isplevel.com/",
+        "provider": "isplevel.com",
+        "city": "Kyiv",
+        "country": "UA",
+        "ipv4": "45.128.148.72"
+      }
+    },
+    "PL": {
+      "skhron.com.ua/lg.skhron.com.ua/": {
+        "url": "https://lg.skhron.com.ua/",
+        "provider": "skhron.com.ua",
+        "city": "Warsaw",
+        "country": "PL",
+        "ipv4": "88.218.206.128"
+      }
+    },
+    "IM": {
+      "netcetera.co.uk/lg.netcetera.co.uk/": {
+        "url": "http://lg.netcetera.co.uk/",
+        "provider": "netcetera.co.uk",
+        "city": "Isle of Man",
+        "country": "IM",
+        "ipv4": "146.247.49.147"
+      }
+    },
+    "IT": {
+      "hostry.com/lg-it1.hostry.com/": {
+        "url": "http://lg-it1.hostry.com/",
+        "provider": "hostry.com",
+        "city": "Milan",
+        "country": "IT",
+        "ipv4": "92.223.79.159"
+      }
+    },
+    "LU": {
+      "hostry.com/lg-lu1.hostry.com/": {
+        "url": "http://lg-lu1.hostry.com/",
+        "provider": "hostry.com",
+        "city": "Luxembourg",
+        "country": "LU",
+        "ipv4": "91.243.85.183"
+      }
+    }
+  }
+}

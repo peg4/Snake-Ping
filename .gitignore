@@ -1,2 +1,6 @@
 test.py
 config.json
+
+__pycache__/
+*.py[cod]
+.venv/

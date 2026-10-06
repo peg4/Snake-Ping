@@ -1,4 +1,3 @@
 {
-    "executablePath":"/snap/bin/chromium",
-    "workers":6
+    "workers": 6
 }

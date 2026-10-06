@@ -1,12 +1,22 @@
-from Plugins.base import Base
+"""Mudfish adapter using the same HTTP endpoints as the site's ping form."""
+from concurrent.futures import ThreadPoolExecutor
+import math
+import re
+import socket
+from urllib.parse import quote
+
 from bs4 import BeautifulSoup
-from pyppeteer import launch
-import asyncio, socket, re
+import requests
+
+from Plugins.base import Base
+
 
 class mudfish(Base):
-    
-    def __init__(self,config):
-        self.config = config
+    url = 'https://ping.mudfish.net'
+    batch_size = 29
+
+    def __init__(self, config):
+        super().__init__(config)
         self.load()
 
     def prepare(self):
@@ -15,97 +25,75 @@ class mudfish(Base):
     def isComparable(self):
         return True
 
-    async def browse(self,target,country):
-        browser = await launch(headless=True,executablePath=self.config['executablePath'])
-        page = await browser.newPage()
+    def discover(self, html, country):
+        soup = BeautifulSoup(html, 'html.parser')
+        nodes = []
+        locations = set()
+        for node in soup.select('input[id^="checkbox_node_"]'):
+            label = node.find_parent('label')
+            location = node.get('location') or (label.get_text(' ', strip=True) if label else '')
+            node_country = node.get('data-country') or location[:2]
+            if node_country != country or node.has_attr('disabled'):
+                continue
+            match = re.search(r'\((.*?)\s-\s(.*?)\)', location)
+            if not match:
+                continue
+            # Keep one representative per city/provider, as in the original plugin.
+            city, provider = match.groups()
+            if (city, provider) in locations:
+                continue
+            sid = node.get('value') or node['id'][len('checkbox_node_'):]
+            if not sid.isdigit():
+                continue
+            locations.add((city, provider))
+            nodes.append(sid)
+        return nodes
 
-        await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36')
-        for run in range(4):
-            try:
-                await page.goto(f"https://ping.mudfish.net/", {'waitUntil' : 'domcontentloaded'})
-                break
-            except:
-                print("Page did not load in 30s, retrying")
+    def measure(self, row, target):
+        sid, ip, location = row
+        if not sid.isdigit() or not self.validateIP(ip):
+            return {}
+        match = re.search(r'\((.*?)\s-\s(.*?)\)', location)
+        if not match:
+            return {}
+        try:
+            response = requests.get(f'{self.url}/ping/{sid}/{quote(ip, safe="")}/{quote(target, safe="")}', timeout=20)
+            response.raise_for_status()
+            avg = float(response.json()['rtt_avg'])
+            if avg < 0 or not math.isfinite(avg):
+                return {}
+        except (requests.RequestException, KeyError, ValueError, TypeError) as exc:
+            print(f'mudfish node {sid} failed: {exc}')
+            return {}
+        city, provider = match.groups()
+        return {sid: {'provider': provider, 'city': city, 'ipv4': ip, 'avg': avg, 'source': self.__class__.__name__}}
 
-        await asyncio.sleep(3)
-
-        await page.focus('#ping_ip')
-        await page.keyboard.type(target)
-        html = await page.content()
-
-        soup = BeautifulSoup(html,"html.parser")
-        inputs = soup.findAll('input', id=re.compile('^checkbox_node_'))
-        probes,filter = {},[]
-        for input in inputs:
-            if input['location'].startswith(country):
-                location = re.findall('\((.*?-\s.*?)(\)|\s[0-9]+)',str(input['location']) , re.MULTILINE)
-                if location[0][0] in filter: continue
-                probes[f"#{input['id']}"] = location[0][0]
-                filter.append(location[0][0])
-
-        html = ""
-        if len(probes) == 0:
-            print("Warning mudfish, No Probes found in Target Country")
-            return html
-        if len(probes) > 30: print(f"Notice mudfish, {len(probes)} probes gonna take some time")
-
-        response = []
-        runs = round(len(probes) / 29)
-        if runs < 29: runs = 1
-        for run in range(runs):
-            targets = list(probes.items())[run*29:(run+1)*29]
-            #Batch Selection
-            for target in targets:
-                element = await page.querySelector(target[0])
-                await element.click()
-            #Batch Start
-            element = await page.querySelector('#ping_start')
-            await element.click()
-            #Wait
-            await asyncio.sleep(10)
-            #Save Batch Data
-            response.append(await page.content())
-            #Batch Remove Selection
-            for target in targets:
-                element = await page.querySelector(target[0])
-                await element.click()      
-
-        await page.close()
-        await browser.close()
-        return response
-
-    def engage(self,origin,target):
-        print("Running mudfish")
-
+    def engage(self, origin, target):
+        print('Running mudfish')
         self.start()
         if not self.validateIP(target):
-            try:
-                ip = socket.gethostbyname(target)
-                target = ip
-            except:
-                return False
-
+            target = socket.gethostbyname(target)
         results = {}
-        data = asyncio.run(self.browse(target,origin))
-        for entry in data:
-            soup = BeautifulSoup(entry,"html.parser")
-
-            tbody = soup.findAll('tbody')
-            if tbody:
-                for tr in tbody[0].findAll('tr'):
-                    for index, td in enumerate(tr.findAll('td')):
-                        if index == 0:
-                            location = re.findall('<td>([A-Z]{2})\s(.*?)\s\((.*?)\s-\s(.*?)\)',str(td) , re.MULTILINE)
-                            provider = location[0][3]
-                            country = location[0][0]
-                            city = location[0][2]
-                        elif index == 1:
-                            ipv4 = re.findall('<td>([0-9.]+)<',str(td) , re.MULTILINE)[0]
-                        elif index == 4:
-                            avg = re.findall('>([0-9.]+)<',str(td) , re.MULTILINE)
-                            if not avg: continue
-                            results[f"{provider}{country}{city}"] = {"provider":provider,"avg":avg[0],"city":city,"ipv4":ipv4,"source":self.__class__.__name__}
-        total = self.diff()
-        print(f"Done mudfish done in {total}s")
+        with requests.Session() as session:
+            response = session.get(self.url + '/', timeout=15)
+            response.raise_for_status()
+            nodes = self.discover(response.text, origin)
+            if not nodes:
+                print('Warning mudfish, No Probes found in Target Country')
+                return {}
+            for offset in range(0, len(nodes), self.batch_size):
+                try:
+                    response = session.post(f'{self.url}/ping/start/{quote(target, safe="")}', data={'nodes': ','.join(nodes[offset:offset + self.batch_size])}, timeout=20)
+                    response.raise_for_status()
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    rows = [(row.get('data-sid', ''), row.get('data-ip', ''), row.select_one('td').get_text(' ', strip=True)) for row in soup.select('#ping_result_table tbody tr[data-sid][data-ip]') if row.select_one('td')]
+                    if not rows:
+                        print('mudfish returned no result rows; the service may have changed.')
+                        continue
+                    with ThreadPoolExecutor(max_workers=4) as pool:
+                        for measurement in pool.map(lambda row: self.measure(row, target), rows):
+                            results.update(measurement)
+                except requests.RequestException as exc:
+                    print(f'mudfish batch failed: {exc}')
+        print(f'Done mudfish in {self.diff()}s')
         return results
-

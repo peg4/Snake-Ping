@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-06",
+  "points": [
+    {
+      "url": "https://fi-lg.mynymbox.io/",
+      "provider": "mynymbox.io",
+      "city": "Helsinki",
+      "country": "FI",
+      "ipv4": "5.181.181.171",
+      "location_source": "Provider looking glass page checked 2026-10-06"
+    },
+    {
+      "url": "https://ping-fi.4vps.su/lg/",
+      "provider": "4vps.su",
+      "city": "Helsinki",
+      "country": "FI",
+      "ipv4": "78.153.139.195",
+      "location_source": "Provider looking glass page checked 2026-10-06"
+    }
+  ]
+}

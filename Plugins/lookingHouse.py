@@ -1,97 +1,161 @@
-from Plugins.base import Base
+"""Adapter for LOOKING.HOUSE's current country pages and network action."""
+from concurrent.futures import ThreadPoolExecutor
+import math
+import re
+from urllib.parse import parse_qs, urlsplit
+
 from bs4 import BeautifulSoup
-from pyppeteer import launch
-import multiprocessing
-import requests, asyncio, re
+import requests
+
+from Plugins.base import Base
+
 
 class lookingHouse(Base):
-    
-    localMapping = {"UK":"GB"}
-    secondaryMapping = {"United States":"USA"}
-    mapping = {}
+    url = 'https://looking.house'
 
-    def __init__(self,config):
-        self.config = config
+    def __init__(self, config):
+        super().__init__(config)
         self.load()
+        self.mapping = {}
+        self.country_ids = {}
+
+    def get_html(self, path):
+        url = urlsplit(path)
+        start = parse_qs(url.query).get('start', [None])[0]
+        if start is not None:
+            country_id = self.country_ids.get(url.path)
+            if not country_id or not start.isdigit():
+                raise ValueError(f'Invalid {self.__class__.__name__} pagination request')
+            response = requests.post(self.url + '/action/looking-glass/search',
+                data={'country': country_id, 'city': 0, 'ipv6': 2, 'start': int(start)}, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            if not isinstance(data, dict) or data.get('Error') not in (0, '0'):
+                raise RuntimeError(f'{self.__class__.__name__} country search failed')
+            templates = data.get('Templates')
+            template = templates.get('looking_glass') if isinstance(templates, dict) else None
+            if not isinstance(template, str):
+                raise RuntimeError(f'{self.__class__.__name__} search returned no cards')
+            return '<div id="LookingGlassServers">' + template + '</div>'
+        response = requests.get(self.url + path, timeout=30)
+        response.raise_for_status()
+        return response.text
 
     def prepare(self):
-        html = self.browseWrapper(f"https://looking.house/index.php",3)
-        soup = BeautifulSoup(html,"html.parser")
-        for a in soup.findAll('a'):
-            if a['href'].startswith("/points.php?country"):
-                location = re.findall('points.php\?country=([0-9]+).*?text-align:center.*?>(.*?)<',str(a) , re.MULTILINE | re.DOTALL)
-                self.mapping[location[0][1]] = location[0][0]
+        soup = BeautifulSoup(self.get_html('/looking-glass'), 'html.parser')
+        self.mapping = {}
+        self.country_ids = {}
+        for link in soup.select('a[href^="/looking-glass/countries/"]'):
+            path = urlsplit(link['href']).path
+            if not re.fullmatch(r'/looking-glass/countries/[a-z0-9-]+', path):
+                continue
+            icon = link.select_one('[class*="country-"]')
+            if not icon:
+                continue
+            code = next((name[8:].upper() for name in icon.get('class', []) if re.fullmatch(r'country-[a-z]{2}', name)), None)
+            if code:
+                self.mapping[code] = path
+                target = link.get('data-bs-target', '')
+                match = re.fullmatch(r'#LookingGlassNav-([0-9]+)', target)
+                if match:
+                    self.country_ids[path] = match.group(1)
+        if not self.mapping:
+            raise RuntimeError(f'{self.__class__.__name__} returned no country links; the site may have changed.')
         return True
 
     def isComparable(self):
         return True
 
-    def run(self,point):
-        headers = {
-        'Origin':'https://looking.house',
-        'Referer':f'https://looking.house/point.php?id={point[0]}&d={self.target}&f=ping',
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
-        'Content-Type':'application/x-www-form-urlencoded'}
-        dataRaw = f'id={point[0]}&domain={self.target}'
-        try: 
-            response = requests.post(url="https://looking.house/action.php?mode=looking_glass&action=ping", data=dataRaw, headers=headers,timeout=15)
-        except:
-            return {}
-
-        if response.status_code != 200: return {}
-        data = response.json()
-        if data['Error'] != 0: return {}
-
-        soup = BeautifulSoup(data['Template'],"html.parser")
-        pre = soup.findAll('pre')
-        avg = re.findall('avg\/.*?=.*?\/([0-9.]+)',str(pre[0]) , re.MULTILINE | re.DOTALL)
-        if not avg: return {}
-        point[1]['avg'] = avg[0]
-        return point[1]
-
-    def engage(self,origin,target):
-        print("Running lookingHouse")
-
-        self.start()
-        if origin in self.localMapping: origin = self.localMapping[origin]
-        country = self.getCountry(origin)
-        #Why is it called fucking USA
-        if country in self.secondaryMapping: country = self.secondaryMapping[country]
-        if not country in self.mapping:
-            print("Warning lookingHouse, No Probes found in Target Country")
-            return {}
-        
-        countryID = self.mapping[country]
-        html = self.browseWrapper(f"https://looking.house/points.php?country={countryID}",3)
-        soup = BeautifulSoup(html,"html.parser")
-        
+    def parse_points(self, html):
+        soup = BeautifulSoup(html, 'html.parser')
         points = {}
-        containers = soup.findAll("div",{"class":"container"})
-        for tr in containers[3].findAll("tr"):
-            if "Speed test / Network test" in str(tr): continue
-            for index, td in enumerate(tr.findAll("td")):
-                if index == 0:
-                    pointID = re.findall('point.php\?id=([0-9]+)',str(td) , re.MULTILINE | re.DOTALL)[0]
-                    ipv4 = re.findall('>([0-9.]+)<',str(td) , re.MULTILINE)[0]
-                elif index == 1:
-                    location = re.findall('src=".*?> (.*?)\n',str(td) , re.MULTILINE | re.DOTALL)[0]
-                    provider = re.findall('company.php.*?>(.*?)<',str(td) , re.MULTILINE | re.DOTALL)[0]
-                    city = location.split(", ")[1]
-                    points[pointID] = {"location":location,"provider":provider,"city":city}
+        for card in soup.select('#LookingGlassServers > .card'):
+            address = card.select_one('input[id^="IPv4Input-"]')
+            if not address or not self.validateIP(address.get('value')):
+                continue
+            link = card.select_one('a[href*="/looking-glass/"]')
+            if not link:
+                continue
+            match = re.fullmatch(r'/companies/([a-z0-9-]+)/looking-glass/([a-z0-9-]+)', urlsplit(link['href']).path)
+            if not match:
+                continue
+            company, item = match.groups()
+            if not any(re.search(r"(?:StartNetworkTest|ShowNetworkOffcanvas)\([^)]*['\"]ping4['\"]", button.get('onclick', '')) and not button.has_attr('disabled') for button in card.select('button')):
+                continue
+            location = link.get_text(' ', strip=True)
+            city = location.rsplit(',', 1)[0].strip() if ',' in location else location
+            points[f'{company}/{item}'] = {'company': company, 'item': item, 'provider': company, 'city': city or 'n/a', 'location': location, 'ipv4': address['value']}
+        return points
 
+    def pagination(self, html, country_path):
+        soup = BeautifulSoup(html, 'html.parser')
+        paths = set()
+        for link in soup.select('.pagination a[href]'):
+            url = urlsplit(link['href'])
+            start = parse_qs(url.query).get('start', [''])[0]
+            if not url.scheme and not url.netloc and url.path == country_path and start.isdigit():
+                if int(start) > 0:
+                    paths.add(f'{country_path}?start={int(start)}')
+        return sorted(paths, key=lambda path: int(path.rsplit('=', 1)[1]))
+
+    def run(self, point):
+        key, details = point
+        try:
+            response = requests.post(self.url + '/action/looking-glass/network',
+                data={'url': details['company'], 'item': details['item'], 'network': 'ping4', 'input': self.target},
+                headers={'Origin': self.url, 'Referer': self.url + f"/companies/{details['company']}/looking-glass/{details['item']}", 'X-Requested-With': 'XMLHttpRequest'}, timeout=35)
+            response.raise_for_status()
+            data = response.json()
+            if not isinstance(data, dict) or data.get('Error') not in (0, '0'):
+                message = data.get('Error', 'invalid response') if isinstance(data, dict) else 'invalid response'
+                print(f'{self.__class__.__name__} node {key} failed: {message}')
+                return {}
+            template = data.get('Template')
+            if not isinstance(template, str):
+                return {}
+            soup = BeautifulSoup(template, 'html.parser')
+            text = '\n'.join(pre.get_text() for pre in soup.select('pre'))
+            match = re.search(r'(?:rtt|round-trip)\s+min/avg/max/(?:mdev|stddev)\s*=\s*[0-9.]+/([0-9.]+)/', text)
+            if not match:
+                print(f'{self.__class__.__name__} node {key}: no ping summary received')
+                return {}
+            avg = float(match.group(1))
+            if not math.isfinite(avg) or avg < 0:
+                return {}
+            return {**details, 'avg': avg}
+        except (requests.RequestException, ValueError, TypeError) as exc:
+            print(f'{self.__class__.__name__} node {key} failed: {exc}')
+            return {}
+
+    def engage(self, origin, target):
+        print(f'Running {self.__class__.__name__}')
+        self.start()
+        code = self.GetAlpha2(origin)
+        country_path = self.mapping.get(code)
+        if not country_path:
+            print(f'Warning {self.__class__.__name__}, No Probes found in Target Country')
+            return {}
+        points = {}
+        pending, visited = [country_path], set()
+        while pending:
+            path = pending.pop(0)
+            if path in visited:
+                continue
+            visited.add(path)
+            try:
+                html = self.get_html(path)
+            except (requests.RequestException, ValueError, RuntimeError) as exc:
+                print(f'{self.__class__.__name__} page {path} failed: {exc}')
+                continue
+            points.update(self.parse_points(html))
+            pending.extend(path for path in self.pagination(html, country_path) if path not in visited and path not in pending)
+        if not points:
+            print(f'{self.__class__.__name__}: no IPv4 ping nodes found in country pages.')
+            return {}
+        print(f'{self.__class__.__name__}: testing {len(points)} nodes')
         self.target = target
-        if len(points) > 30: print(f"Notice lookingHouse, {len(points)} probes gonna take some time")
-        pool = multiprocessing.Pool(processes = 4)
-        results = pool.map(self.run, points.items())
-        pool.close()
-        pool.join()
-
-        output = {}
-        for details in results:
-            if not "avg" in details: continue
-            output[f"{details['provider']}{details['location']}"] = {"provider":details['provider'],"avg":details['avg'],"city":details['city'],"ipv4":ipv4,"source":self.__class__.__name__}
-            
-        total = self.diff()
-        print(f"Done lookingHouse done in {total}s")
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            results = list(pool.map(self.run, points.items()))
+        output = {f"{details['company']}/{details['item']}": {**details, 'source': self.__class__.__name__} for details in results if 'avg' in details}
+        print(f'Done {self.__class__.__name__} in {self.diff()}s')
         return output
-
